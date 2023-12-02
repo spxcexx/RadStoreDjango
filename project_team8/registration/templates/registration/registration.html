@@ -1,0 +1,37 @@
+{% extends 'app_settings/app_settings.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'registration/css/registration.css' %}">
+    <title>Regisration</title>
+</head>
+<body>
+    {% block content %}
+    <div class="login_and_reg">
+        <h1>Реєстрація</h1>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{text_error}}
+            <p class="input_plase">
+                <input type="text" placeholder="Введіть ваш логін" name="username">
+            </p>
+            <p class="input_plase">
+                <input type="password" placeholder="Введіть ваш пароль" name="password">
+            </p>
+            <p class="input_plase">
+                <input type="password" placeholder="Підтвердіть ваш пароль" name="password_confirm" required>
+            </p>
+            <p class="input_plase">
+                <input type="number" placeholder="Введіть ваш номер телефону" name="number">
+            </p>
+            <p class="input_plase">
+                <input type="email" placeholder="Введіть ваш email" name="email">
+            </p>
+            <button>Зареєструватися</button>
+        </form>
+    </div>
+    {% endblock %}
+</body>
+</html>

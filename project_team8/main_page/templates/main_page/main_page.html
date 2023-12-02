@@ -1,0 +1,21 @@
+{% extends 'app_settings/app_settings.html' %}
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main_page/css/main_page.css' %}">
+    <title>Main</title>
+</head>
+<body>
+    {% block content %}
+
+    <main>
+        <h1>Наш магазин представляє продаж радіоактивних матеріалів</h1>
+        <p>Наші клієнти світяться від щастя та опромінення</p>
+        <!-- <p>Ми можемо продавати вам будь-які радіоактивні матеріали, які ви тільки забажаєте. Уран 235, Уран 238, Каліфорній, Плутоній і так далі. </p> -->
+    </main>
+    {% endblock %}
+</body>
+</html>
