@@ -10,13 +10,16 @@ def show_registration(request):
         username = request.POST.get("username")
         password = request.POST.get("password")
         password_confirm = request.POST.get("password_confirm")
-        number = request.POST.get("number")
+        last_name = request.POST.get("last_name")
         email = request.POST.get("email")
         if password == password_confirm:
             try:
-                User.objects.create_user(username=username, password=password, number=number, email=email)
+                print("1")
+                User.objects.create_user(username=username, password=password, last_name=last_name, email=email)
+                print("2")
                 return redirect('show_login')
             except IntegrityError:
+                print("3")
                 return render(request, "registration/registration.html", context={"text_error" : "Такий користувач вже існує"})
         else:
             return render(request, "registration/registration.html", context={"text_error" : "Паролі не збігаються"})

@@ -1,3 +1,21 @@
-body main h1{
-    color: red;
+*{
+    margin: 0;
+    padding: 0;
+
 }
+
+/*body main h1{
+    color: red;
+}*/
+
+body {
+    background-image: url('{% static "main_page/img/main.jpg" %}');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+/*body main .p {
+    color: white;
+}*/

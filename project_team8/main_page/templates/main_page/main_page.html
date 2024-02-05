@@ -1,21 +1,27 @@
-{% extends 'app_settings/app_settings.html' %}
 {% load static %}
 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'main_page/css/main_page.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <title>Main</title>
 </head>
+<header>
+    <nav>
+        <a href="{% url 'show_main' %}">Головна</a>
+        <a href="{% url 'show_contact' %}" class="headet_links">Наші контакти</a>
+        <a href="{% url 'show_product' %}" class="headet_links">Продукти</a>
+        <a href="{% url 'show_shopping_cart' %}" class="headet_links">Кошик</a>
+        <a href="{% url 'show_login' %}" class="headet_links">Вхід</a>
+        <a href="https://t.me/+fCXcugYQhwcyYTMy" class="headet_links">Відгуки</a>
+    </nav>
 <body>
-    {% block content %}
-
     <main>
         <h1>Наш магазин представляє продаж радіоактивних матеріалів</h1>
         <p>Наші клієнти світяться від щастя та опромінення</p>
-        <!-- <p>Ми можемо продавати вам будь-які радіоактивні матеріали, які ви тільки забажаєте. Уран 235, Уран 238, Каліфорній, Плутоній і так далі. </p> -->
+        <p>Ми можемо продавати вам будь-які радіоактивні матеріали, які ви тільки забажаєте. Уран 235, Уран 238, Каліфорній, Плутоній і так далі. </p>
     </main>
-    {% endblock %}
 </body>
+
 </html>

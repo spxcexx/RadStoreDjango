@@ -18,7 +18,6 @@ from django.contrib import admin
 from django.urls import path
 from main_page.views import *
 from contact_page.views import *
-from app_settings.views import *
 from product_page.views import *
 from registration.views import *
 from shopping_cart_page.views import *
@@ -27,7 +26,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', show_main_page , name="show_main"),
     path('contact/', show_contact_page , name="show_contact"),
-    path('settings/', show_app_settings , name="show_app_settings"),
     path('product/', show_product_page , name="show_product"),
     path('registration/', show_registration , name="show_registration"),
     path('shopping_cart/', show_shopping_cart_page , name="show_shopping_cart"),

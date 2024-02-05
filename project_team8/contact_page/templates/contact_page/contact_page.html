@@ -1,24 +1,25 @@
-{% extends 'app_settings/app_settings.html' %}
 {% load static %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'contact_page/css/contact_page.css' %}">
-    <title>Contact</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>Main</title>
 </head>
+<header>
+    <nav>
+        <a href="{% url 'show_main' %}">Головна</a>
+        <a href="{% url 'show_contact' %}" class="headet_links">Наші контакти</a>
+        <a href="{% url 'show_product' %}" class="headet_links">Продукти</a>
+        <a href="{% url 'show_shopping_cart' %}" class="headet_links">Кошик</a>
+        <a href="{% url 'show_login' %}" class="headet_links">Вхід</a>
+        <a href="https://t.me/+fCXcugYQhwcyYTMy" class="headet_links">Відгуки</a>
+    </nav>
 <body>
-    {% block content %}
     <main>
-        <div>
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Instagram</a>
-        </div>
-        <div>
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Telegram</a>
-        </div>
-        <p>+38054923752035</p>
-        <p>Наш магазин знаходиться за такими координатами: 51.38942110827667, 30.09883691389289</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6273.708757257409!2d30.09573966842645!3d51.38976876500442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472a7da75da15329%3A0x90fa0ec0023e401a!2z0KfQvtGA0L3QvtCx0LjQu9GM0YHRjNC60LAg0LDRgtC-0LzQvdCwINC10LvQtdC60YLRgNC-0YHRgtCw0L3RhtGW0Y8!5e0!3m2!1suk!2sua!4v1706552073439!5m2!1suk!2sua" width="300" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </main>
-    {% endblock %}
 </body>
+
 </html>
